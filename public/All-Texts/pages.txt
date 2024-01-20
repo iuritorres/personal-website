@@ -91,9 +91,9 @@ page transitions, cool background effects, unique design and it is mobile respon
 
 ARTICLES PAGE:
 
-- Words Can Change The World! 
+- Words Can Change The World!
 
-Build A Custom Pagination Component In Reactjs From Scratch
+Build A Custom Pagination Component In ReactJS From Scratch
 Learn how to build a custom pagination component in ReactJS from scratch. 
 Follow this step-by-step guide to integrate Pagination component in your ReactJS project.
 9 min read
@@ -104,9 +104,9 @@ Discover how to use React-Loading, React-Lottie & build a custom loading screen.
 Improve the user experience.
 10 min read
 
-Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling
+Form Validation In ReactJS: Build A Reusable Custom Hook For Inputs And Error Handling
 
-Silky Smooth Scrolling In Reactjs: A Step-By-Step Guide For React Developers
+Silky Smooth Scrolling In ReactJS: A Step-By-Step Guide For React Developers
 
 Creating An Efficient Modal Component In React Using Hooks And Portals
 
