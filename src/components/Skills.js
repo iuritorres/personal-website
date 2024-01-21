@@ -7,11 +7,18 @@ function Skill({ name, xPosition, yPosition }) {
             flex items-center justify-center
             rounded-full font-semibold bg-dark text-light
             py-3 px-6 shadow-dark cursor-pointer absolute
+
+            dark:text-dark dark:bg-light
           "
       whileHover={{ scale: 1.05 }}
       initial={{ x: 0, y: 0 }}
-      whileInView={{ x: xPosition, y: yPosition }}
-      transition={{ duration: 1.5 }}
+      whileInView={{
+        x: xPosition,
+        y: yPosition,
+        transition: {
+          duration: 1.5,
+        },
+      }}
       viewport={{ once: true }}
     >
       {name}
@@ -28,6 +35,8 @@ export default function Skills() {
         className="
           w-full h-screen relative rounded-full
           flex items-center justify-center bg-circularLight
+
+          dark:bg-circularDark
         "
       >
         <motion.div
@@ -35,6 +44,8 @@ export default function Skills() {
             flex items-center justify-center
             rounded-full font-semibold bg-dark text-light
             py-3 px-6 shadow-dark cursor-pointer absolute
+
+            dark:text-dark dark:bg-light
           "
           whileHover={{ scale: 1.05 }}
         >

@@ -22,7 +22,13 @@ function Details({ type, time, place, info }) {
       >
         <h3 className="capitalize font-bold text-2xl">{type}</h3>
 
-        <span className="capitalize font-medium text-dark/75">
+        <span
+          className="
+            capitalize font-medium text-dark/75
+
+            dark:text-light/75
+          "
+        >
           {time} | {place}
         </span>
 
@@ -51,7 +57,11 @@ export default function Education() {
           <motion.div
             ref={lineRef}
             style={{ scaleY: scrollYProgress }}
-            className="absolute left-9 top-4 w-[4px] h-full bg-dark origin-top"
+            className="
+              absolute left-9 top-4 w-[4px] h-full bg-dark origin-top
+
+              dark:bg-light
+            "
           />
 
           <ul className="w-full flex flex-col items-center justify-between ml-4">

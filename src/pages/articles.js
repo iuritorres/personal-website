@@ -69,12 +69,16 @@ function FeaturedArticle({ img, title, time, summary, link }) {
       className="
         col-span-1 w-full p-4 bg-light relative
         border border-solid border-dark rounded-2xl
+
+        dark:bg-dark dark:border-light
       "
     >
       <div
         className="
           absolute top-0 -right-3 -z-10 rounded-br-3xl
           w-[101%] h-[103%] rounded-[2rem] bg-dark
+
+          dark:bg-light
         "
       />
 
@@ -95,15 +99,34 @@ function FeaturedArticle({ img, title, time, summary, link }) {
       <Link
         href={link}
         target="_blank"
-        className="w-full cursor-pointer overflow-hidden rounded-lg"
+        className="
+          w-full cursor-pointer overflow-hidden rounded-lg hover:underline
+
+          dark:text-light
+        "
       >
-        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline">
-          {title}
-        </h2>
+        <h2 className="capitalize text-2xl font-bold my-2 mt-4">{title}</h2>
       </Link>
 
-      <p className="text-sm mb-2">{summary}</p>
-      <span className="text-primary font-semibold">{time}</span>
+      <p
+        className="
+          text-sm mb-2
+
+          dark:text-light/75
+        "
+      >
+        {summary}
+      </p>
+
+      <span
+        className="
+          text-primary font-semibold
+
+          dark:text-primaryDark
+        "
+      >
+        {time}
+      </span>
     </li>
   );
 }
@@ -126,11 +149,21 @@ function Article({ img, title, date, link }) {
         bg-light text-dark first:mt-0
         border border-solid border-dark
         border-r-4 border-b-4
+
+        dark:bg-dark dark:text-light dark:border-light
       "
     >
       <MovingImage title={title} img={img} link={link} />
 
-      <span className="text-primary font-semibold pl-4">{date}</span>
+      <span
+        className="
+          text-primary font-semibold pl-4
+
+          dark:text-primaryDark
+        "
+      >
+        {date}
+      </span>
     </motion.li>
   );
 }
@@ -172,7 +205,13 @@ export default function Articles() {
             />
           </ul>
 
-          <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
+          <h2
+            className="
+              font-bold text-4xl w-full text-center my-16 mt-32
+
+              dark:text-light
+            "
+          >
             All articles
           </h2>
 

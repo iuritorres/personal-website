@@ -5,10 +5,13 @@ import {
   DribbbleIcon,
   GithubIcon,
   LinkedInIcon,
+  MoonIcon,
   PinterestIcon,
+  SunIcon,
   TwitterIcon,
 } from "./Icons";
 import Logo from "./Logo";
+import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
 function CustomLink({ href, title, className = "" }) {
   const router = useRouter();
@@ -23,6 +26,8 @@ function CustomLink({ href, title, className = "" }) {
           left-0 -bottom-0.5 group-hover:w-full
           transition-[width] ease duration-300
           ${router.asPath === href ? "w-full" : "w-0"}
+          
+          dark:bg-light
         `}
       >
         &nbsp;
@@ -32,8 +37,16 @@ function CustomLink({ href, title, className = "" }) {
 }
 
 export default function NavBar() {
+  const [theme, setTheme] = useThemeSwitcher();
+
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
+    <header
+      className="
+        w-full px-32 py-8 font-medium flex items-center justify-between
+
+        dark:text-light
+      "
+    >
       <nav className="flex items-center justify-center gap-8">
         <CustomLink href="/" title="Home" />
         <CustomLink href="/about" title="About" />
@@ -77,7 +90,11 @@ export default function NavBar() {
           target="_blank"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-          className="w-6"
+          className="
+            w-6
+
+            bg-light rounded-full
+          "
         >
           <PinterestIcon />
         </motion.a>
@@ -91,6 +108,19 @@ export default function NavBar() {
         >
           <DribbbleIcon />
         </motion.a>
+
+        <button
+          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+          className={`
+            flex items-center justify-center
+            rounded-full p-1 bg-dark text-light
+
+            dark:bg-light dark:text-dark
+          `}
+        >
+          {theme === "dark" && <SunIcon className="fill-dark" />}
+          {theme === "light" && <MoonIcon className="fill-dark" />}
+        </button>
       </nav>
 
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
