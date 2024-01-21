@@ -30,6 +30,12 @@ export default function Home() {
                 src={profilePicture}
                 alt="Iuri Torres"
                 className="w-full h-auto"
+                priority
+                sizes="
+                  (max-width: 768px) 100vw,
+                  (max-width: 1200) 50vw,
+                  50vw
+                "
               />
             </div>
 

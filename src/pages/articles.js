@@ -93,6 +93,12 @@ function FeaturedArticle({ img, title, time, summary, link }) {
           className="w-full h-auto"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
+          priority
+          sizes="
+            (max-width: 768px) 100vw,
+            (max-width: 1200) 50vw,
+            50vw
+          "
         />
       </Link>
 

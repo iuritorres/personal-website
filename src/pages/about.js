@@ -107,6 +107,12 @@ export default function About() {
                 src={profilePicture}
                 alt="Iuri Torres"
                 className="w-full h-auto rounded-2xl"
+                priority
+                sizes="
+                  (max-width: 768px) 100vw,
+                  (max-width: 1200) 50vw,
+                  33vw
+                "
               />
             </div>
 
