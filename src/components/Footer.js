@@ -15,7 +15,7 @@ export default function Footer() {
     >
       <Layout
         className="
-          py-8 flex items-center justify-between
+          !py-8 flex items-center justify-between
 
           lg:flex-col lg:py-6 lg:gap-2
         "
