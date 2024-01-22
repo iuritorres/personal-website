@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+
 import featuredProject1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
 import featuredProject2 from "../../public/images/projects/portfolio-cover-image.jpg";
 
@@ -18,6 +19,8 @@ function FeaturedProject({ type, title, summary, img, link, github }) {
         rounded-3xl border border-solid border-dark
         bg-light shadow-2xl p-12 relative rounded-br-2xl
 
+        lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4
+
         dark:border-light dark:bg-dark
       "
     >
@@ -26,6 +29,8 @@ function FeaturedProject({ type, title, summary, img, link, github }) {
           absolute top-0 -right-3 -z-10 rounded-br-3xl
           w-[101%] h-[103%] rounded-[2.5rem] bg-dark
 
+          sm:h-[102%] xs:-right-2 xs:w-full xs:rounded-[1.5rem]
+
           dark:bg-light
         "
       />
@@ -33,7 +38,11 @@ function FeaturedProject({ type, title, summary, img, link, github }) {
       <Link
         href={link}
         target="_blank"
-        className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
+        className="
+          w-1/2 cursor-pointer overflow-hidden rounded-lg
+
+          lg:w-full
+        "
       >
         <MotionImage
           src={img}
@@ -50,10 +59,18 @@ function FeaturedProject({ type, title, summary, img, link, github }) {
         />
       </Link>
 
-      <div className="w-1/2 flex flex-col items-start justify-between pl-6">
+      <div
+        className="
+          w-1/2 flex flex-col items-start justify-between pl-6
+
+          lg:w-full lg:pl-0 lg:pt-6
+        "
+      >
         <span
           className="
             text-primary font-medium text-xl
+
+            xs:text-base
             
             dark:text-primaryDark
           "
@@ -69,12 +86,22 @@ function FeaturedProject({ type, title, summary, img, link, github }) {
             dark:text-light
           "
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold">{title}</h2>
+          <h2
+            className="
+              my-2 w-full text-left text-4xl font-bold
+
+              sm:text-sm
+            "
+          >
+            {title}
+          </h2>
         </Link>
 
         <p
           className="
             my-2 font-medium text-dark
+
+            sm:text-sm
 
             dark:text-light
           "
@@ -92,6 +119,8 @@ function FeaturedProject({ type, title, summary, img, link, github }) {
             className="
               ml-4 rounded-lg bg-dark text-light
               p-2 px-6 text-lg font-semibold
+
+              sm:px-4 sm:text-base
 
               dark:bg-light dark:text-dark
             "
@@ -111,6 +140,8 @@ function Project({ type, title, img, link, github }) {
         w-full flex flex-col items-center justify-center rounded-2xl
         border border-solid border-dark bg-light p-6 relative rounded-br-2xl
 
+        xs:p-4
+
         dark:border-light dark:bg-dark
       "
     >
@@ -118,6 +149,8 @@ function Project({ type, title, img, link, github }) {
         className="
           absolute top-0 -right-3 -z-10 rounded-br-3xl
           w-[101%] h-[103%] rounded-[2rem] bg-dark
+
+          md:-right-2 md:w-[101%] sm:h-[102%] xs:rounded-[1.5rem]
           
           dark:bg-light
         "
@@ -142,6 +175,8 @@ function Project({ type, title, img, link, github }) {
           className="
             text-primary font-medium text-xl
 
+            lg:text-lg md:text-base
+
             dark:text-primaryDark
           "
         >
@@ -156,7 +191,15 @@ function Project({ type, title, img, link, github }) {
             dark:text-light
           "
         >
-          <h2 className="my-2 w-full text-left text-3xl font-bold">{title}</h2>
+          <h2
+            className="
+              my-2 w-full text-left text-3xl font-bold
+
+              lg:text-2xl
+            "
+          >
+            {title}
+          </h2>
         </Link>
 
         <div className="w-full mt-2 flex items-center justify-between">
@@ -166,13 +209,23 @@ function Project({ type, title, img, link, github }) {
             className="
               text-lg font-semibold underline decoration-2 underline-offset-2
 
+              md:text-base
+
               dark:text-light
             "
           >
             Visit
           </Link>
 
-          <Link href={github} target="_blank" className="w-8">
+          <Link
+            href={github}
+            target="_blank"
+            className="
+              w-8
+
+              md:w-6
+            "
+          >
             <GithubIcon />
           </Link>
         </div>
@@ -199,10 +252,20 @@ export default function Projects() {
         <Layout className="pt-16">
           <AnimatedText
             text="Imagination Trumps Knowledge!"
-            className="mb-16"
+            className="
+              mb-16
+
+              lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl
+            "
           />
 
-          <div className="grid grid-cols-12 gap-24 gap-y-32">
+          <div
+            className="
+              grid grid-cols-12 gap-24 gap-y-32
+
+              xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0
+            "
+          >
             <div className="col-span-12">
               <FeaturedProject
                 type="Featured Project"
@@ -216,7 +279,13 @@ export default function Projects() {
               />
             </div>
 
-            <div className="col-span-6">
+            <div
+              className="
+                col-span-6
+
+                sm:col-span-12
+              "
+            >
               <Project
                 type="Featured Project"
                 title="Crypto Screener Application"
@@ -225,7 +294,13 @@ export default function Projects() {
                 github="#"
               />
             </div>
-            <div className="col-span-6">
+            <div
+              className="
+                col-span-6
+
+                sm:col-span-12
+              "
+            >
               <Project
                 type="Featured Project"
                 title="Crypto Screener Application"
@@ -247,7 +322,13 @@ export default function Projects() {
               />
             </div>
 
-            <div className="col-span-6">
+            <div
+              className="
+                col-span-6
+
+                sm:col-span-12
+              "
+            >
               <Project
                 type="Featured Project"
                 title="Crypto Screener Application"
@@ -256,7 +337,13 @@ export default function Projects() {
                 github="#"
               />
             </div>
-            <div className="col-span-6">
+            <div
+              className="
+                col-span-6
+
+                sm:col-span-12
+              "
+            >
               <Project
                 type="Featured Project"
                 title="Crypto Screener Application"

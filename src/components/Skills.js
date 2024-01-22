@@ -8,6 +8,9 @@ function Skill({ name, xPosition, yPosition }) {
             rounded-full font-semibold bg-dark text-light
             py-3 px-6 shadow-dark cursor-pointer absolute
 
+            lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 xs:bg-transparent
+            xs:dark:bg-transparent xs:text-dark xs:dark:text-light xs:font-bold
+
             dark:text-dark dark:bg-light
           "
       whileHover={{ scale: 1.05 }}
@@ -29,12 +32,25 @@ function Skill({ name, xPosition, yPosition }) {
 export default function Skills() {
   return (
     <>
-      <h2 className="font-bold text-8xl mt-64 w-full text-center">Skills</h2>
+      <h2
+        className="
+          font-bold text-8xl mt-64 w-full text-center
+          
+          md:text-6xl md:mt-32
+        "
+      >
+        Skills
+      </h2>
 
       <div
         className="
           w-full h-screen relative rounded-full
           flex items-center justify-center bg-circularLight
+
+          lg:h-[80vh] sm:h-[60vh] sx:h-[50vh]
+          lg:bg-circularLightLg lg:dark:bg-circularDarkLg
+          md:bg-circularLightMd md:dark:bg-circularDarkMd
+          sm:bg-circularLightSm sm:dark:bg-circularDarkSm
 
           dark:bg-circularDark
         "
@@ -44,6 +60,8 @@ export default function Skills() {
             flex items-center justify-center
             rounded-full font-semibold bg-dark text-light
             py-3 px-6 shadow-dark cursor-pointer absolute
+
+            lg:p-6 md:p-4 xs:text-xs xs:p-2
 
             dark:text-dark dark:bg-light
           "
