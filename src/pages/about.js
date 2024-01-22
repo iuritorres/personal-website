@@ -3,10 +3,12 @@ import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Layout from "@/components/Layout";
 import Skills from "@/components/Skills";
+import TransitionEffect from "@/components/TransitionEffect";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+
 import profilePicture from "../../public/images/profile/developer-pic-2.jpg";
 
 function AnimatedNumbers({ value }) {
@@ -40,6 +42,8 @@ export default function About() {
         <title>Iuri Torres | About</title>
         <meta name="description" content="About page" />
       </Head>
+
+      <TransitionEffect />
 
       <main
         className="

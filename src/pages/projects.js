@@ -1,6 +1,7 @@
 import AnimatedText from "@/components/AnimatedText";
 import { GithubIcon } from "@/components/Icons";
 import Layout from "@/components/Layout";
+import TransitionEffect from "@/components/TransitionEffect";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
@@ -241,6 +242,8 @@ export default function Projects() {
         <title>Iuri Torres | Projects</title>
         <meta name="description" content="Projects page" />
       </Head>
+
+      <TransitionEffect />
 
       <main
         className="
