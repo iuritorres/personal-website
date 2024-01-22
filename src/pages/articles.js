@@ -203,7 +203,7 @@ export default function Articles() {
       <TransitionEffect />
 
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden">
-        <Layout className="pt-16">
+        <Layout className="!pt-16">
           <AnimatedText
             text="Words Can Change The World!"
             className="

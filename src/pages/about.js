@@ -52,7 +52,7 @@ export default function About() {
           dark:text-light
         "
       >
-        <Layout className="pt-16">
+        <Layout className="!pt-16">
           <AnimatedText
             text="Passion Fuels Purpose!"
             className="

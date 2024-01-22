@@ -29,9 +29,9 @@ export default function Home() {
       >
         <Layout
           className="
-            pt-0
+            !pt-0
 
-            md:pt-16 sm:pt-8
+            md:!pt-16 sm:!pt-8
           "
         >
           <div

@@ -252,7 +252,7 @@ export default function Projects() {
           dark:text-light
         "
       >
-        <Layout className="pt-16">
+        <Layout className="!pt-16">
           <AnimatedText
             text="Imagination Trumps Knowledge!"
             className="
